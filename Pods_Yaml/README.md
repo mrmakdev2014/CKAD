@@ -50,3 +50,31 @@ kubectl delete service/azure-vote-front
 kubectl delete deployment/azure-vote-front
 
 
+#Describe Pod
+kubectl describe pod demoapp
+the descrption file show information about when the pod start, informarion , annotations , spec , network ,
+ Containers images , Volumes and Events .
+ 
+
+ # how to creare file in the fly . 
+ you can use touch filename.yml
+ or you can use 
+ cat > filename.yml then enter and add the content of the file 
+
+cat > pod2.yml
+
+you can also us 
+vi filename.yml
+nano filename.yaml
+vim filename.yml
+
+#Questions ?
+Create a new pod with the name 'redis' and with the image 'redis123'
+Use a pod-definition YAML file. And yes the image name is wrong!
+answer:
+kubectl run redis --image=redis123 --generator=run-pod/v1
+how to extract the yaml file ?
+
+The above image is wrong , how to correct it in one step
+kubectl edit pod redis
+once you type the above command yaml file will open , just edit the image name then press :X to to be applied
